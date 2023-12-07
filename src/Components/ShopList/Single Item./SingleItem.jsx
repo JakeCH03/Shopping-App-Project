@@ -6,12 +6,10 @@ import "./SingleItem.css";
 const SingleItem = () => {
   const [item, setItem] = useState([]);
   const data = useParams().item_id;
-  console.log(data);
 
   useEffect(() => {
     getSingleItem(data).then((res) => {
       setItem(res.data.item);
-      console.log(res.data.item);
     });
   }, []);
   return (
@@ -22,7 +20,7 @@ const SingleItem = () => {
         <div className="single-content-wrapper">
           <h4 className="single-category-name">{item.category_name}</h4>
           <p className="single-description">{item.description}</p>
-          <h4 className="single-price">Buy now for ${item.price / 100}!</h4>
+          <h4 className="single-price">Buy now for £{item.price / 100}!</h4>
         </div>
       </section>
       <div className="single-buttons-wrapper">
