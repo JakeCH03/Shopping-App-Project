@@ -40,10 +40,10 @@
 }
 
 .single-description {
-    margin: auto;
+  margin: auto;
   font-size: 22px;
   padding-bottom: 10%;
-  width: 600px;
+  width: 60%;
 }
 
 .single-price {
@@ -73,12 +73,12 @@
   border-radius: 12px;
 }
 
-.add-basket:hover{
-    background-color: white;
-    cursor: pointer;
+.add-basket:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
-.give-kudos:hover{
-    background-color: white;
-    cursor: pointer;
+.give-kudos:hover {
+  background-color: white;
+  cursor: pointer;
 }
