@@ -37,7 +37,7 @@ const SellItem = () => {
       setName("");
       setDesc("");
       setImg("");
-      setPrice(0);
+      setPrice("");
       setCategory();
     });
   };
@@ -87,21 +87,27 @@ const SellItem = () => {
           onChange={priceChangeHandler}
         />
       </label>
-      <label htmlFor="category">
-        <select
-          id="category"
-          name="Categories"
-          className="item-category"
-          value={category}
-          onChange={categoryChangeHandler}
-        >
-          <option defaultValue="defaultValue">Please Select a Category</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Household">Household</option>
-          <option value="Clothing">Clothing</option>
-        </select>
-      </label>
-      <button type="submit">Submit!</button>
+      <div className="submit-wrapper">
+        <label htmlFor="category">
+          <select
+            id="category"
+            name="Categories"
+            className="item-category"
+            value={category}
+            onChange={categoryChangeHandler}
+          >
+            <option defaultValue="defaultValue">
+              Please Select a Category
+            </option>
+            <option value="Electronics">Electronics</option>
+            <option value="Household">Household</option>
+            <option value="Clothing">Clothing</option>
+          </select>
+        </label>
+        <button type="submit" className="submit-button">
+          Submit!
+        </button>
+      </div>
     </form>
   );
 };

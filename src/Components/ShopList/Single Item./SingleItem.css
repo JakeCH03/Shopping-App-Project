@@ -1,0 +1,82 @@
+.single-item-wrapper {
+  border: 2px solid black;
+  background-color: azure;
+  border-radius: 12px;
+  max-height: 80%;
+  max-width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.single-item-name {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.single-image {
+  border: 2px solid black;
+  box-shadow: 0 0 8px 2px gray;
+  border-radius: 12px;
+  width: 40%;
+  position: relative;
+  display: flex;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.image-and-content {
+  display: flex;
+}
+
+.single-content-wrapper {
+  width: 50%;
+}
+
+.single-category-name {
+  font-size: 28px;
+  text-decoration: underline;
+  margin-top: 0;
+  padding-bottom: 10%;
+}
+
+.single-description {
+  font-size: 22px;
+  padding-bottom: 10%;
+}
+
+.single-price {
+  margin-top: 35%;
+  font-size: 28px;
+}
+
+.single-buttons-wrapper {
+  display: flex;
+  padding-bottom: 5%;
+  width: 50%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.add-basket {
+  height: 60px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.give-kudos {
+  height: 60px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.add-basket:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.give-kudos:hover{
+    background-color: white;
+    cursor: pointer;
+}
