@@ -1,0 +1,10 @@
+import axios from "axios";
+
+const sortByCategory = (category) => {
+  return axios
+    .get(`https://nc-marketplace-sem-1.onrender.com/api/items?category_name=${category}`)
+    .then((res) => res);
+}
+
+export default sortByCategory
+

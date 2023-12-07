@@ -8,4 +8,6 @@ const getAllItems = () => {
     .then((res) => res);
 };
 
-export default getAllItems;
+
+
+export default getAllItems

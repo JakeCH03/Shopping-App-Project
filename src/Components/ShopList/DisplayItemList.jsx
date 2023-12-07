@@ -14,7 +14,7 @@ const DisplayItemList = () => {
 
   return (
     <>
-    <GetCategories setCategory={setCategory} category={category}/>
+    <GetCategories setShopItems={setShopItems} setCategory={setCategory} category={category}/>
     <section className="all-items">
       {shopItems.map((item) => {
         return <ItemCard item={item} key={item.item_id} />;
