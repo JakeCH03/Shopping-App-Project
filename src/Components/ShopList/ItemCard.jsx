@@ -1,9 +1,11 @@
+import "./ItemCard.css"
+
 const ItemCard = ({item}) => {
   return (
-    <section>
-      <h3>{item.item_name}</h3>
-      <img src={item.img_url} />
-      <p>{item.description}</p>
+    <section className="item-wrapper">
+      <h3 className="item-name">{item.item_name}</h3>
+      <img className="image" src={item.img_url} />
+      <p className="description">{item.description}</p>
     </section>
   );
 };
