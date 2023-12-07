@@ -1,0 +1,121 @@
+.sell-form {
+  border: 2px solid black;
+  max-width: 80%;
+  max-height: 80%;
+  min-width: 400px;
+  min-height: 750px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: azure;
+}
+
+.sell-item-name {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  height: 150px;
+  border-radius: 12px;
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.sell-item-name span {
+  margin-top: 10px;
+}
+
+.sell-item-name input {
+  width: 80%;
+  margin: auto;
+  height: 40%;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.item-description {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  height: 150px;
+  border-radius: 12px;
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.item-description span {
+  margin-top: 10px;
+}
+
+.item-description input {
+  width: 80%;
+  margin: auto;
+  height: 40%;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.item-url {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  height: 150px;
+  border-radius: 12px;
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.item-url span {
+  margin-top: 10px;
+}
+
+.item-url input {
+  width: 80%;
+  margin: auto;
+  height: 40%;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.item-price {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  height: 150px;
+  border-radius: 12px;
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.item-price span {
+  margin-top: 10px;
+}
+
+.item-price input {
+  width: 80%;
+  margin: auto;
+  height: 40%;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.item-category {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  width: 50%;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 12px;
+  background-color: grey;
+  margin-bottom: 10px;
+  color: white;
+}
+
+
+
+option {
+  text-align: center;
+}
