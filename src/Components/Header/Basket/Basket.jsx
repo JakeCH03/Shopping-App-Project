@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-// import basketImg from "../../../assets/cart-38-xl.png";
+import "./Basket.css";
 
 const Basket = () => {
-  return <Link className="link" to={"/basket"}>Basket</Link>;
+  return (
+    <Link className="basket-link" to={"/basket"}>
+      Basket
+    </Link>
+  );
 };
 
 export default Basket;

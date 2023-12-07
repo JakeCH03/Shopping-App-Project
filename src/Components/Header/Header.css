@@ -1,4 +1,11 @@
 .header {
-  border: 2px solid black;
+  border: 2px solid azure;
+  background-color: azure;
   height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: -20px;
 }
