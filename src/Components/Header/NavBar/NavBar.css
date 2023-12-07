@@ -1,0 +1,17 @@
+.link {
+  text-decoration: none;
+  padding: 20px;
+}
+
+.link-list {
+  padding: 0px;
+  border: 2px solid black;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  width: auto;
+  list-style: outside none none;
+}
+
