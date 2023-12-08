@@ -1,8 +1,13 @@
 import axios from "axios";
 
 const sortByCategory = (category) => {
+  let query = ""
+  if (category) {
+    query = `category_name=${category}`
+  } 
+
   return axios
-    .get(`https://nc-marketplace-sem-1.onrender.com/api/items?category_name=${category}`)
+    .get(`https://nc-marketplace-sem-1.onrender.com/api/items?${query}&sort_by=item_id&order=desc`)
     .then((res) => res);
 }
 

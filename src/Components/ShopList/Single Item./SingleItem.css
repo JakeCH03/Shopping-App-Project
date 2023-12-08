@@ -18,7 +18,6 @@
   box-shadow: 0 0 8px 2px gray;
   border-radius: 12px;
   width: 40%;
-  position: relative;
   display: flex;
   margin-left: 5%;
   margin-bottom: 5%;
@@ -81,4 +80,18 @@
 .give-kudos:hover {
   background-color: white;
   cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  margin: auto;
+
+}
+
+.base-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  align-items: center;
 }

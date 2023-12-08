@@ -21,6 +21,7 @@ const GetCategories = ({ setShopItems, category, setCategory }) => {
         <div className="dropdown">
             <button className="dropbtn">Categories</button>
             <ul className="dropdown-content">
+                <li className="category" onClick={() => handleCategorySort()}>All</li>
                 {category.map(category => {
                     return <li className="category" key={category.category_name} onClick={() => {
                         handleCategorySort(category.category_name)

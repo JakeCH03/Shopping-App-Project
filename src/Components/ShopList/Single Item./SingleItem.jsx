@@ -2,10 +2,18 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import getSingleItem from "../../../../Utils/getSingleItem";
 import "./SingleItem.css";
+import Popup from "../AddToBasket/Popup";
 
 const SingleItem = () => {
   const [item, setItem] = useState([]);
+  const [popup, setPopup] = useState(false)
+
   const data = useParams().item_id;
+
+  const handlePopup = () => {
+    setPopup(true)
+  }
+
 
   useEffect(() => {
     getSingleItem(data).then((res) => {
@@ -13,6 +21,9 @@ const SingleItem = () => {
     });
   }, []);
   return (
+    <section className="base-wrapper">
+    
+    <div className="overlay">{popup && < Popup id={item.item_id}/> } </div>
     <section className="single-item-wrapper">
       <h3 className="single-item-name">{item.item_name}</h3>
       <section className="image-and-content">
@@ -24,10 +35,11 @@ const SingleItem = () => {
         </div>
       </section>
       <div className="single-buttons-wrapper">
-        <button className="add-basket">Add To Basket</button>
+        <button className="add-basket" onClick={handlePopup}>Add To Basket</button>
         <button className="give-kudos">Give Kudos</button>
       </div>
-    </section>
+    </section></section>
+    
   );
 };
 
