@@ -20,6 +20,7 @@ const DisplayBasket = () => {
 
   const handleOrder = () => {
     items.forEach(item => deleteItemById(item.item_id))
+    context.setBasket([])
   }
 
   if (items.length === context.basket.length) {

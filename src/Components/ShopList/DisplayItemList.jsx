@@ -12,10 +12,10 @@ const DisplayItemList = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getAllItems().then((res) => {
+    setTimeout(() => {getAllItems().then((res) => {
       setIsLoading(false);
       setShopItems(res.data.items);
-    });
+    })}, 1000)
   }, []);
 
   if (isLoading) {
