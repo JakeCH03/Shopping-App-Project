@@ -1,0 +1,29 @@
+.order-button {
+  margin-top: 10%;
+  border: 2px solid black;
+  background-color: azure;
+  box-shadow: 0 0 8px 2px gray;
+  border-radius: 12px;
+  height: 100px;
+  width: 170px;
+}
+
+.order-button:hover {
+  background: rgb(201, 255, 201);
+  cursor: pointer;
+  box-shadow: 0 0 14px 6px rgb(179, 178, 178);
+}
+
+.no-items-added {
+  border: 2px solid black;
+  background-color: azure;
+  box-shadow: 0 0 8px 2px gray;
+  border-radius: 12px;
+  font-size: 34px;
+  width: 40%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+  position: relative;
+  margin-top: 10%;
+}

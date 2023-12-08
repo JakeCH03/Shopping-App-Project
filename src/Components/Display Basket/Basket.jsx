@@ -4,6 +4,7 @@ import getSingleItem from "../../../Utils/getSingleItem";
 import ItemCard from "../ShopList/ItemCard";
 import deleteItemById from "../../../Utils/orderItems";
 import { Link } from "react-router-dom";
+import "./Basket.css";
 
 const DisplayBasket = () => {
   const context = useContext(BasketContext);
@@ -16,14 +17,14 @@ const DisplayBasket = () => {
         setItems((curr) => [res.data.item, ...curr]);
       });
     });
-  }, [])
+  }, []);
 
   const handleOrder = () => {
-    items.forEach(item => deleteItemById(item.item_id))
-    context.setBasket([])
-  }
+    items.forEach((item) => deleteItemById(item.item_id));
+    context.setBasket([]);
+  };
 
-  if (items.length === context.basket.length) {
+  if (items.length === context.basket.length && items.length > 0) {
     return (
       <div>
         <section className="all-items">
@@ -31,8 +32,21 @@ const DisplayBasket = () => {
             return <ItemCard item={item} key={item.item_id} />;
           })}
         </section>
-        <Link className="link" to={"/items"}><button onClick={handleOrder}>Confirm and order</button></Link>
+        <Link className="link" to={"/items"}>
+          <button onClick={handleOrder} className="order-button">
+            Confirm and order
+          </button>
+        </Link>
       </div>
+    );
+  } else {
+    return (
+      <Link className="link" to={"/items"}>
+        <div className="no-items-added">
+          <p>You have not added anything to your basket!</p>
+          <p>Click here to browse the shop</p>
+        </div>
+      </Link>
     );
   }
 };
