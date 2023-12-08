@@ -1,11 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-export const BasketContext = createContext()
+export const BasketContext = createContext();
 
 export const BasketProvider = (props) => {
-    const [basket, setBasket] = useState([]);
+  const [basket, setBasket] = useState([]);
 
-    return <BasketContext.Provider setBasket={setBasket} id={props.id} >
-        <button onClick={()=>setBasket((curr)=>{[id, ...curr]})}>Continue shopping</button>
+  return (
+    <BasketContext.Provider value={{ basket, setBasket }}>
+      {props.children}
     </BasketContext.Provider>
-}
+  );
+};
