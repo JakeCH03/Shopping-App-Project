@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { BasketContext, BasketProvider } from "../Context/BasketContext";
+import { BasketContext } from "../Context/BasketContext";
 import getSingleItem from "../../../Utils/getSingleItem";
 import ItemCard from "../ShopList/ItemCard";
+import deleteItemById from "../../../Utils/orderItems";
+import { Link } from "react-router-dom";
 
 const DisplayBasket = () => {
   const context = useContext(BasketContext);
@@ -16,13 +18,20 @@ const DisplayBasket = () => {
     });
   }, [])
 
+  const handleOrder = () => {
+    items.forEach(item => deleteItemById(item.item_id))
+  }
+
   if (items.length === context.basket.length) {
     return (
-      <section className="all-items">
-        {items.map((item) => {
-          return <ItemCard item={item} key={item.item_id} />;
-        })}
-      </section>
+      <div>
+        <section className="all-items">
+          {items.map((item) => {
+            return <ItemCard item={item} key={item.item_id} />;
+          })}
+        </section>
+        <Link className="link" to={"/items"}><button onClick={handleOrder}>Confirm and order</button></Link>
+      </div>
     );
   }
 };
